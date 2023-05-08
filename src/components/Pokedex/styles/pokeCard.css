@@ -1,0 +1,21 @@
+.pokemon {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 0.8em;
+  overflow: hidden;
+}
+.pokemon__header {
+  background-color: rgb(180, 180, 180);
+  height: 180px;
+  position: relative;
+}
+.pokemon__sprites {
+  width: 60%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pokemon__body {
+}
