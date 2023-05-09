@@ -1,0 +1,62 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5em;
+  background-color: #e5e5e5;
+}
+.home__title {
+  width: 55%;
+}
+.home__greetings {
+  color: #fe1936;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.home__text {
+  font-size: 1.2rem;
+}
+.home__form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 2.6em;
+}
+.home__input {
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border: none;
+  padding: 01em;
+}
+.home__btn {
+  background-color: #d93f3f;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+}
+.home__footer {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}
+.red__bar {
+  width: 100%;
+  background-color: #dd1a1a;
+  height: 3.5em;
+}
+.black__bar {
+  width: 100%;
+  background-color: #0c0c0c;
+  height: 2.5em;
+}
+.circle1 {
+}
+.circle2 {
+}
