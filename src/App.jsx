@@ -4,6 +4,7 @@ import './App.css'
 import Home from './pages/Home'
 import ProtectedRoutes from './pages/ProtectedRoutes'
 import Pokedex from './pages/Pokedex'
+import PokeInfo from './pages/PokeInfo'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route element={<ProtectedRoutes />}>
             <Route path='/pokedex' element={<Pokedex />} />
+            <Route path='/pokedex/:name' element={<PokeInfo />} />
           </Route>
 
         </Routes>

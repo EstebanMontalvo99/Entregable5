@@ -11,9 +11,9 @@ const PokeCard = ({ url }) => {
   console.log(pokemon);
 
   return (
-    <article className="pokemon">
+    <article className={`pokemon border-${pokemon?.types[0].type.name}`}>
 
-      <header className="pokemon__header">
+      <header className={`pokemon__header bg-${pokemon?.types[0].type.name}`} >
 
         <img className="pokemon__sprite" src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
 
@@ -21,7 +21,7 @@ const PokeCard = ({ url }) => {
 
       <section className="pokemon__body">
 
-        <h3 className="pokemon__name">{pokemon?.name}</h3>
+        <h3 className={`pokemon__name  color-${pokemon?.types[0].type.name}`}>{pokemon?.name}</h3>
 
         <ul className="pokemon__types">
 
@@ -47,7 +47,7 @@ const PokeCard = ({ url }) => {
 
                 <span className="pokemon__stats-label">{objStat.stat.name}</span>
 
-                <span className="pokeon__stats-value">{objStat.base_stat}</span>
+                <span className={`pokemon__stats-value  color-${pokemon?.types[0].type.name}`}>{objStat.base_stat}</span>
 
               </li>
 
@@ -59,7 +59,7 @@ const PokeCard = ({ url }) => {
 
       </section>
 
-    </article>
+    </article >
   )
 }
 

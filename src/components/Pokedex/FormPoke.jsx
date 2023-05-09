@@ -2,9 +2,10 @@ import React, { useRef } from 'react'
 
 const FormPoke = () => {
   const inputPoke = useRef()
+
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(inputPoke.current.value);
+      (inputPoke.current.value.trim().toLowerCase());
   }
   return (
     <div>
