@@ -1,17 +1,20 @@
-import React, { useEffect } from 'react'
-import useFetch from '../../hooks/useFetch'
-import styles from "./styles/pokeCard.css"
+import React, { useEffect } from 'react';
+import useFetch from '../../hooks/useFetch';
+import styles from "./styles/pokeCard.css";
+import { useNavigate } from 'react-router-dom';
 
 const PokeCard = ({ url }) => {
   const [pokemon, getPokemonById] = useFetch(url);
   useEffect(() => {
-    getPokemonById()
-  }, [])
-
-  console.log(pokemon);
+    getPokemonById();
+  }, []);
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/pokedex/${pokemon.name}`);
+  };
 
   return (
-    <article className={`pokemon border-${pokemon?.types[0].type.name}`}>
+    <article onClick={handleClick} className={`pokemon border-${pokemon?.types[0].type.name}`}>
 
       <header className={`pokemon__header bg-${pokemon?.types[0].type.name}`} >
 
@@ -60,7 +63,7 @@ const PokeCard = ({ url }) => {
       </section>
 
     </article >
-  )
-}
+  );
+};
 
-export default PokeCard
+export default PokeCard;

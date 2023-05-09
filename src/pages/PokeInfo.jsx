@@ -13,8 +13,14 @@ const PokeInfo = () => {
 
   return (
     <div>
-      <img src={pokemon?.sprites.other["official-artwork"].front_default} alt="" />
-      <h2>{pokemon?.name}</h2>
+      {
+        hasError
+          ? <h1>This pokemon does not exist</h1>
+          :
+          <><img src={pokemon?.sprites.other["official-artwork"].front_default} alt="" /><h2>{pokemon?.name}</h2></>
+      }
+
+
     </div>
   )
 }
