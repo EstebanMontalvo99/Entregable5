@@ -44,7 +44,7 @@ const PokemonCard = ({ pokemon }) => {
         <ul className='stats__list'>
           {
             pokemon?.stats.map(statInfo => (
-              <><li className='stats__item'><span> {statInfo.stat.name} </span> <span>{statInfo.base_stat}/150</span></li><div className="statBar" style={{ width: `calc(100/150 * ${statInfo.base_stat}%)` }} ></div></>
+              <div key={statInfo.stat.url}><li className='stats__item'><span> {statInfo.stat.name} </span> <span>{statInfo.base_stat}/150</span></li><div className="statBar" style={{ width: `calc(100/150 * ${statInfo.base_stat}%)` }} ></div></div>
             ))
           }
         </ul>

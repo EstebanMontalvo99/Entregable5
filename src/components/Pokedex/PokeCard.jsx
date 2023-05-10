@@ -10,7 +10,7 @@ const PokeCard = ({ url }) => {
   }, []);
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate(`/pokedex/${pokemon.name}`);
+    navigate(`/pokedex/${pokemon?.name}`);
   };
 
   return (

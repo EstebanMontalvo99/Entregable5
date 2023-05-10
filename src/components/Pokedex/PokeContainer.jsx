@@ -1,13 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import useFetch from '../../hooks/useFetch';
 import PokeCard from './PokeCard';
 import pokeContainer from "./styles/pokeContainer.css";
-const PokeContainer = ({ formUrl }) => {
-
+const PokeContainer = ({ formUrl, }) => {
   const [pokemons, getAllPokemons] = useFetch(formUrl);
+
+
   useEffect(() => {
     getAllPokemons();
   }, [formUrl]);
+
   return (
     <div className='pokeContainer'>
 

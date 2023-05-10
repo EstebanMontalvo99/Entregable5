@@ -19,7 +19,7 @@ const FormPoke = ({ setFormUrl, urlBase }) => {
 
   };
   const handleChange = (e) => {
-    setFormUrl(e.target.value);
+    setFormUrl(e.target.value + "?limit=20&offset=20");
 
   };
   return (
