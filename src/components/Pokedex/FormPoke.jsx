@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
+import styles from "./styles/formPoke.css";
 
 const FormPoke = ({ setFormUrl, urlBase }) => {
   const inputPoke = useRef();
@@ -22,16 +23,16 @@ const FormPoke = ({ setFormUrl, urlBase }) => {
 
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input ref={inputPoke} type="text" />
-        <button>Search</button>
+    <div className='pokedex__form'>
+      <form className='pokedex__form__form' onSubmit={handleSubmit}>
+        <input className='pokedex__input' ref={inputPoke} type="text" />
+        <button className='pokedex__btn'>Search</button>
       </form>
-      <select onChange={handleChange}>
-        <option value={urlBase}>AllPokemons</option>
+      <select className='pokedex__select' onChange={handleChange}>
+        <option className='pokedex__option' value={urlBase}>AllPokemons</option>
         {
           types?.results.map(type => (
-            <option key={type.url} value={type.url}>{type.name}</option>
+            <option className='pokedex__option' key={type.url} value={type.url}>{type.name}</option>
           ))
         }
       </select>

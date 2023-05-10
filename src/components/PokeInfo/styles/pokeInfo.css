@@ -1,0 +1,24 @@
+.pokeInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10em;
+  background-color: #e5e5e5;
+  gap: 2.5em;
+}
+.return {
+  position: fixed;
+  top: 11em;
+  left: 1em;
+  width: 5em;
+  height: 5em;
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 0.6rem;
+}

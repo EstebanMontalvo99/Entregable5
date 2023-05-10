@@ -1,0 +1,41 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.header__title {
+  width: 20em;
+  margin-right: 5em;
+}
+.red__bar {
+  width: 100%;
+  background-color: #dd1a1a;
+  height: 3.5em;
+  padding-left: 2em;
+}
+.black__bar {
+  width: 100%;
+  background-color: #0c0c0c;
+  height: 2.5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.circle1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5em;
+  height: 5em;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 10px solid #000000;
+  margin-right: 1em;
+}
+.circle2 {
+  width: 2.5em;
+  height: 2.5em;
+  background-color: #212121;
+  border-radius: 50%;
+  border: 5px solid #000000;
+}
