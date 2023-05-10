@@ -11,7 +11,7 @@ const ProtectedRoutes = () => {
         <div className="red__bar">
           <img className='header__title' src="/image.png" alt="" />
         </div>
-        <div className="black__bar">
+        <div className="black__bar-header">
           <div className="circle1">
             <div className="circle2"></div>
           </div>
