@@ -1,0 +1,6 @@
+.pokeInfo {
+  min-height: 100vh;
+}
+.hasError {
+  background-color: inherit;
+}

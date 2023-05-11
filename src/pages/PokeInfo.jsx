@@ -4,6 +4,7 @@ import useFetch from '../hooks/useFetch';
 import PokemonCard from '../components/PokeInfo/PokemonCard';
 import Movements from '../components/PokeInfo/Movements';
 import pokeInfo from "../components/PokeInfo/styles/pokeInfo.css";
+import HasError from '../components/PokeInfo/HasError';
 
 const PokeInfo = () => {
   const { name } = useParams();
@@ -20,12 +21,14 @@ const PokeInfo = () => {
     <div className='pokeInfo'>
       {
         hasError
-          ? <h1>This pokemon does not exist</h1>
+          ? <><HasError /><div onClick={handleClick} className="return">
+            <p>{"Return"}</p>
+          </div></>
           :
           <>
 
             <div onClick={handleClick} className="return">
-              <p>{"back"}</p>
+              <p>{"Return"}</p>
             </div>
             <PokemonCard pokemon={pokemon} />
             <Movements pokemon={pokemon} />
