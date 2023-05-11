@@ -23,22 +23,12 @@ const Pokedex = () => {
 
   const { trainerName } = useSelector(state => state);
 
-  const handleNext = () => {
-    setPage(page + 20);
-  };
-  const handlePrevious = () => {
-    setPage(page - 20);
-  };
   return (
     <div className='pokedex__container'>
-      <div onClick={handleNext} className='next'><p>⏭️</p></div>
-      {pageIs0 ?
-        ""
-        :
-        <div onClick={handlePrevious} className='previous'><p>⏮️</p></div>}
+
       <p className='pokedex__text'><span className='pokedex__greetings'>Welcome {trainerName}</span> here you will find your favorites pokemons.</p>
-      <FormPoke setFormUrl={setFormUrl} urlBase={urlBase} />
-      <PokeContainer formUrl={formUrl} page={page} />
+      <FormPoke setFormUrl={setFormUrl} urlBase={urlBase} setPage={setPage} />
+      <PokeContainer formUrl={formUrl} page={page} pageIs0={pageIs0} setPage={setPage} />
     </div>
   );
 };

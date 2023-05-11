@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 import styles from "./styles/formPoke.css";
 
-const FormPoke = ({ setFormUrl, urlBase }) => {
+const FormPoke = ({ setFormUrl, urlBase, setPage }) => {
   const inputPoke = useRef();
   const navigate = useNavigate();
   const url = "https://pokeapi.co/api/v2/type";
@@ -19,7 +19,8 @@ const FormPoke = ({ setFormUrl, urlBase }) => {
 
   };
   const handleChange = (e) => {
-    setFormUrl(e.target.value + "?limit=20&offset=20");
+    setFormUrl(e.target.value);
+    setPage(0);
 
   };
   return (
